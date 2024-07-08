@@ -23,19 +23,4 @@ public class menuButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         textComponent.color = Color.white;
         imageComponent.enabled = false;
     }
-
-    public void PlayGame()
-    {
-        // Assuming the next scene in the build index is the game scene
-        //int nextSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
-        //SceneManager.LoadScene(nextSceneIndex);
-        Debug.Log("Play Game");
-    }
-
-    // This method will be called when the Quit button is pressed
-    public void QuitGame()
-    {
-        Debug.Log("Quit Game");
-        Application.Quit();
-    }
 }
