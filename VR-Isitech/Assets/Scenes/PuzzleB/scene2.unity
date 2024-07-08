@@ -1219,8 +1219,8 @@ Transform:
   m_GameObject: {fileID: 353823337}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.35, y: 1.005, z: -3.146}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 5.87, y: 1.005, z: -3.169}
+  m_LocalScale: {x: 0.031072319, y: 1, z: 1.2228023}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -6875,6 +6875,7 @@ GameObject:
   - component: {fileID: 1807152674}
   - component: {fileID: 1807152678}
   - component: {fileID: 1807152679}
+  - component: {fileID: 1807152680}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -6993,7 +6994,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 2
   m_CollisionDetection: 0
 --- !u!114 &1807152679
 MonoBehaviour:
@@ -7147,6 +7148,18 @@ MonoBehaviour:
   m_StartingSingleGrabTransformers: []
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
+--- !u!114 &1807152680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1807152673}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f625607c1816449d90db8c103cdedb5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1815086883
 GameObject:
   m_ObjectHideFlags: 0
