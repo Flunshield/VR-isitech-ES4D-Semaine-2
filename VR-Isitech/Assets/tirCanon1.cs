@@ -19,6 +19,7 @@ public class tirCanon1 : MonoBehaviour
     }
 
 private void tirCanon () {
+    Debug.Log("is trigger");
     currentAnimator.SetTrigger("trigger");
 }
 }
