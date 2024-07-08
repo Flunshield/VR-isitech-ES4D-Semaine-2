@@ -1595,6 +1595,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -5216581434543980006, guid: 730dc2970670b094abbc0cbe2549e189, type: 3}
+--- !u!95 &585947831
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 585947829}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1335408f40424421992aa28cd4ddf607, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &660060633 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
@@ -3119,22 +3140,27 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -4481458055458372689, guid: c2b00369f35bf6d4eb4d35c37db505c1, type: 3}
---- !u!111 &1062176277
-Animation:
+--- !u!95 &1062176277
+Animator:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1062176275}
   m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: c90c1119ef1e842bfad18475523a7192, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: c90c1119ef1e842bfad18475523a7192, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 1
-  m_AnimatePhysics: 0
-  m_CullingType: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1335408f40424421992aa28cd4ddf607, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &1115461857 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 098765961acad1548861aaa92041abf0, type: 3}
@@ -3920,8 +3946,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctObject: {fileID: 906802663}
-  triggeredMaterial: {fileID: 2100000, guid: 6252b551806ea8940a1613d21e68a460, type: 2}
-  animationTriggerName: TriggerAnimation
+  triggeredMaterial: {fileID: 2100000, guid: e42270a11c28f4744b73a18278e4ef33, type: 2}
+  currentAnimator: {fileID: 1062176277}
 --- !u!1001 &1371451797
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6352,6 +6378,22 @@ PrefabInstance:
       propertyPath: m_ModelPrefab
       value: 
       objectReference: {fileID: 320486568}
+    - target: {fileID: 9014170783809206330, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014170783809206330, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014170783809206330, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9014170783809206330, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9014170785475729497, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       propertyPath: m_ModelPrefab
       value: 
@@ -6454,6 +6496,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 730dc2970670b094abbc0cbe2549e189, type: 3}
       insertIndex: -1
       addedObject: {fileID: 585947830}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 730dc2970670b094abbc0cbe2549e189, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 585947831}
   m_SourcePrefab: {fileID: 100100000, guid: 730dc2970670b094abbc0cbe2549e189, type: 3}
 --- !u!4 &2140956106 stripped
 Transform:
