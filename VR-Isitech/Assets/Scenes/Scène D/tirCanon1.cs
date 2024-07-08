@@ -6,6 +6,7 @@ public class tirCanon1 : MonoBehaviour
 {
 
     public Animator currentAnimator;
+    public GameObject correctObject;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,9 +18,12 @@ public class tirCanon1 : MonoBehaviour
     {
         
     }
-
-private void tirCanon () {
-    Debug.Log("is trigger");
-    currentAnimator.SetTrigger("trigger");
-}
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject == correctObject)
+        {
+            Debug.Log("is trigger");
+            currentAnimator.SetTrigger("trigger");
+        }
+    }
 }
