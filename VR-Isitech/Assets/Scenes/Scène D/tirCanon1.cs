@@ -31,12 +31,10 @@ public class tirCanon1 : MonoBehaviour
     // Méthode appelée lorsque le collider entre en collision avec un autre collider
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Collider entered trigger");
 
         // Vérifie si l'objet entrant est celui attendu
         if (other.gameObject == correctObject)
         {
-            Debug.Log("Correct object triggered animation");
             currentAnimator.SetBool("trigger", true);  // Déclenche l'animation
         }
     }
