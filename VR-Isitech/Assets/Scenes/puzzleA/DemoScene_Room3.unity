@@ -3880,7 +3880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   correctObject: {fileID: 906802663}
-  triggeredMaterial: {fileID: 0}
+  triggeredMaterial: {fileID: 2100000, guid: 6252b551806ea8940a1613d21e68a460, type: 2}
 --- !u!1001 &1371451797
 PrefabInstance:
   m_ObjectHideFlags: 0
