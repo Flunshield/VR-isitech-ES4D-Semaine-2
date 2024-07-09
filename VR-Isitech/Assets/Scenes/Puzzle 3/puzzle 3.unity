@@ -329,6 +329,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canAddColor: {r: 0, g: 1, b: 0, a: 1}
   originalColor: {r: 1, g: 1, b: 1, a: 0}
+  slots:
+  - {fileID: 44332775}
+  - {fileID: 1115980661}
+  - {fileID: 1391250292}
+  - {fileID: 532659530}
+  leftDoorController: {fileID: 1691667863}
+  rightDoorController: {fileID: 1158521327}
 --- !u!65 &44332778
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3673,6 +3680,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canAddColor: {r: 0, g: 1, b: 0, a: 1}
   originalColor: {r: 1, g: 1, b: 1, a: 0}
+  slots:
+  - {fileID: 532659530}
+  - {fileID: 1115980661}
+  - {fileID: 1391250292}
+  - {fileID: 44332775}
+  leftDoorController: {fileID: 1691667863}
+  rightDoorController: {fileID: 1158521327}
 --- !u!65 &532659533
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7672,6 +7686,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canAddColor: {r: 0, g: 1, b: 0, a: 1}
   originalColor: {r: 1, g: 1, b: 1, a: 0}
+  slots:
+  - {fileID: 1115980661}
+  - {fileID: 1391250292}
+  - {fileID: 44332775}
+  - {fileID: 532659530}
+  leftDoorController: {fileID: 1691667863}
+  rightDoorController: {fileID: 1158521327}
 --- !u!65 &1115980664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10198,6 +10219,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   canAddColor: {r: 0, g: 1, b: 0, a: 1}
   originalColor: {r: 1, g: 1, b: 1, a: 0}
+  slots:
+  - {fileID: 1391250292}
+  - {fileID: 1115980661}
+  - {fileID: 44332775}
+  - {fileID: 532659530}
+  leftDoorController: {fileID: 1691667863}
+  rightDoorController: {fileID: 1158521327}
 --- !u!65 &1391250295
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -2,26 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
-using UnityEngine.SceneManagement;  // Ajouté pour SceneManager
+using UnityEngine.SceneManagement;
 
 public class addItem : MonoBehaviour
 {
-    
     public Color canAddColor = Color.green;
     public Color originalColor = new Color(1, 1, 1, 0);
     private Renderer slotRenderer;
-    private Dictionary<GameObject, bool> inventoryItems = new Dictionary<GameObject, bool>();
+
+    public GameObject[] slots;  // Liste de slots
+    private Dictionary<GameObject, bool> slotStatus = new Dictionary<GameObject, bool>();  // Dictionnaire pour suivre l'état des slots
+
+    public LeftDoorController leftDoorController;
+    public RightDoorController rightDoorController;
+
     private void Start()
     {
         slotRenderer = GetComponent<Renderer>();
         slotRenderer.material.color = originalColor;
+
+        // Initialiser l'état des slots
+        foreach (var slot in slots)
+        {
+            slotStatus[slot] = false;
+        }
     }
+
     private void Update()
     {
-       if(inventoryItems.Count == 0 )
-       {
-        slotRenderer.material.color = canAddColor;
-       }
+        int filledSlots = 0;
+        foreach (var slot in slotStatus.Values)
+        {
+            if (slot)
+            {
+                filledSlots++;
+            }
+        }
+
+        // Vérifiez si trois slots ou plus sont remplis
+        if (filledSlots >= 3)
+        {
+            leftDoorController.OpenDoors();
+            rightDoorController.OpenDoors();
+        }
+        else
+        {
+            leftDoorController.CloseDoors();
+            rightDoorController.CloseDoors();
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -31,18 +59,17 @@ public class addItem : MonoBehaviour
         GameObject gameObject = other.gameObject;
         if (gameObject.CompareTag("collectible") && gameObject.GetComponent<XRGrabInteractable>())
         {
-            
-            if (inventoryItems.Count == 0)
+            foreach (var slot in slots)
             {
-                AttachToCube(gameObject);
-            }
-            else
-            {
-                Debug.Log("Inventaire déjà plein.");
-              
+                if (!slotStatus[slot])
+                {
+                    AttachToSlot(gameObject, slot);
+                    break;
+                }
             }
         }
     }
+
     private void OnTriggerExit(Collider other)
     {
         GameObject gameObject = other.gameObject;
@@ -52,17 +79,14 @@ public class addItem : MonoBehaviour
         }
     }
 
-    void AttachToCube(GameObject item)
+    void AttachToSlot(GameObject item, GameObject slot)
     {
-        // Définir le cube (ce GameObject) comme parent de l'item
-        item.transform.SetParent(this.transform);
+        // Définir le slot comme parent de l'item
+        item.transform.SetParent(slot.transform);
 
-        // Réinitialiser la position locale de l'item pour qu'il soit positionné correctement dans le cube
+        // Réinitialiser la position locale de l'item pour qu'il soit positionné correctement dans le slot
         item.transform.localPosition = Vector3.zero;
         item.transform.localRotation = Quaternion.identity;
-        item.transform.localScale = Vector3.one;
-
-        // Réduit la taille de l'item
         item.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
 
         var rigidbody = item.GetComponent<Rigidbody>();
@@ -78,21 +102,15 @@ public class addItem : MonoBehaviour
             grabInteractable.selectExited.AddListener(OnItemGrabbed);
         }
 
-        // Marquer l'objet comme étant dans un inventaire
-        if (!inventoryItems.ContainsKey(item))
-        {
-            inventoryItems.Add(item, true);
-        }
-        else
-        {
-            inventoryItems[item] = true;
-        }
+        // Marquer le slot comme rempli
+        slotStatus[slot] = true;
         slotRenderer.material.color = originalColor;
     }
 
     void OnItemGrabbed(SelectExitEventArgs args)
     {
         GameObject item = args.interactableObject.transform.gameObject;
+        GameObject slot = item.transform.parent.gameObject;
 
         // Rendre le rigidbody non-cinématique pour permettre les interactions physiques
         var rigidbody = item.GetComponent<Rigidbody>();
@@ -101,7 +119,7 @@ public class addItem : MonoBehaviour
             rigidbody.isKinematic = false;
         }
 
-        // Détacher l'objet du parent (inventaire) et l'attacher à la scène principale
+        // Détacher l'objet du parent (slot) et l'attacher à la scène principale
         item.transform.SetParent(null);
         SceneManager.MoveGameObjectToScene(item, SceneManager.GetActiveScene());
 
@@ -115,12 +133,8 @@ public class addItem : MonoBehaviour
         // Réinitialiser l'échelle de l'item pour sa taille originale
         item.transform.localScale = Vector3.one;
 
-        // Marquer l'objet comme n'étant plus dans un inventaire
-        if (inventoryItems.ContainsKey(item))
-        {
-            inventoryItems[item] = false;
-            inventoryItems.Remove(item); // Retirer l'objet du dictionnaire lorsqu'il est sorti de l'inventaire
-        }
+        // Marquer le slot comme vide
+        slotStatus[slot] = false;
         slotRenderer.material.color = originalColor;
     }
 }
