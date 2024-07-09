@@ -8,6 +8,7 @@ public class Receptacle : MonoBehaviour
     private Material originalMaterial;
     private bool objectPlaced = false;
     public Animator currentAnimator;
+    public GameObject particule;
 
     void Start()
     {
@@ -31,6 +32,6 @@ public class Receptacle : MonoBehaviour
             GetComponent<Renderer>().material = triggeredMaterial;
         }
         currentAnimator.SetTrigger("openChest");
-
+        particule.SetActive(true);
     }
 }
