@@ -4,15 +4,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class Receptacle : MonoBehaviour
 {
     public GameObject correctObject;
-    public Material triggeredMaterial;
-    private Material originalMaterial;
-    private bool objectPlaced = false;
-    public Animator currentAnimator;
     public GameObject particule;
+    public Animator currentAnimator;
+    private bool objectPlaced = false;
 
     void Start()
     {
-        originalMaterial = GetComponent<Renderer>().material;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -23,17 +20,16 @@ public class Receptacle : MonoBehaviour
             Rigidbody rb = other.gameObject.GetComponent<Rigidbody>();
             if (rb != null)
             {
-                rb.isKinematic = true; // Set isKinematic to true
+                rb.isKinematic = true;
             }
             other.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
             other.gameObject.transform.position = transform.position;
             other.gameObject.transform.rotation = transform.rotation;
-            GetComponent<Renderer>().material = triggeredMaterial;
         }
         currentAnimator.SetTrigger("openChest");
         correctObject.SetActive(false);
         particule.SetActive(true);
-        StartCoroutine(DeactivateAfterDelay(1f));
+        StartCoroutine(DeactivateAfterDelay(0.5f));
     }
 
     System.Collections.IEnumerator DeactivateAfterDelay(float delay)

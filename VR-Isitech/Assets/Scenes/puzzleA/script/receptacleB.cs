@@ -4,15 +4,12 @@ using UnityEngine.XR.Interaction.Toolkit;
 public class ReceptacleB : MonoBehaviour
 {
     public GameObject correctObject;
-    public Material triggeredMaterial;
-    public GameObject portal;
-    private Material originalMaterial;
-    private bool objectPlaced = false;
     public GameObject particule;
+    public GameObject portal;
+    private bool objectPlaced = false;
 
     void Start()
     {
-        originalMaterial = GetComponent<Renderer>().material;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -29,7 +26,6 @@ public class ReceptacleB : MonoBehaviour
             other.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
             other.gameObject.transform.position = transform.position;
             other.gameObject.transform.rotation = transform.rotation;
-            GetComponent<Renderer>().material = triggeredMaterial;
         }
         correctObject.SetActive(false);
         particule.SetActive(true);
