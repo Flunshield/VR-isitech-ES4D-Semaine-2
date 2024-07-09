@@ -26,10 +26,10 @@ public class ReceptacleB : MonoBehaviour
             other.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
             other.gameObject.transform.position = transform.position;
             other.gameObject.transform.rotation = transform.rotation;
+            correctObject.SetActive(false);
+            particule.SetActive(true);
+            StartCoroutine(DeactivateAfterDelay(5f));
         }
-        correctObject.SetActive(false);
-        particule.SetActive(true);
-        StartCoroutine(DeactivateAfterDelay(5f));
     }
 
     System.Collections.IEnumerator DeactivateAfterDelay(float delay)
