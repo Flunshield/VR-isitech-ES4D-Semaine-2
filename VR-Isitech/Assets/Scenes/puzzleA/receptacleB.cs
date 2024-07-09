@@ -31,6 +31,7 @@ public class ReceptacleB : MonoBehaviour
             other.gameObject.transform.rotation = transform.rotation;
             GetComponent<Renderer>().material = triggeredMaterial;
         }
+        correctObject.SetActive(false);
         particule.SetActive(true);
         StartCoroutine(DeactivateAfterDelay(5f));
     }
