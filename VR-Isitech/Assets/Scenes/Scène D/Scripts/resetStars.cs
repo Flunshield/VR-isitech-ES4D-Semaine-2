@@ -5,6 +5,7 @@ using UnityEngine;
 public class resetStars : MonoBehaviour
 {
     public Animator currentAnimator;  // Référence à l'Animator
+    public Animator boutonAnimator;  // Référence à l'Animator
     public GameObject correctObject;  // L'objet qui déclenchera l'animation
     public GameObject star1;
     public GameObject star2;
@@ -13,6 +14,11 @@ public class resetStars : MonoBehaviour
     public Animator animator2;
     public Animator animator3;
     public Animator animator4;
+    public Animator boutonAnimator1;
+    public Animator boutonAnimator2;
+    public Animator boutonAnimator3;
+    public Animator boutonAnimator4;
+    public string input;
 
     public string trigger;  // Nom du déclencheur
 
@@ -85,6 +91,7 @@ public class resetStars : MonoBehaviour
         if (other.gameObject == correctObject)
         {
             currentAnimator.SetBool(trigger, true);  // Déclenche l'animation
+            boutonAnimator.SetBool(input, true);  // Déclenche l'animation du bouton
             StartCoroutine(DisplayObjectAfterDelay(2.0f));  // Démarre la coroutine pour afficher l'objet après 2 secondes
         }
     }
@@ -99,14 +106,26 @@ public class resetStars : MonoBehaviour
         animator2.SetBool(trigger, false);
         animator3.SetBool(trigger, false);
         animator4.SetBool(trigger, false);
+
         animator1.Rebind();
         animator1.Update(0f);
+        boutonAnimator1.Rebind();
+        boutonAnimator1.Update(0f);
+
         animator2.Rebind();
         animator2.Update(0f);
+        boutonAnimator2.Rebind();
+        boutonAnimator2.Update(0f);
+
         animator3.Rebind();
         animator3.Update(0f);
+        boutonAnimator3.Rebind();
+        boutonAnimator3.Update(0f);
+
         animator4.Rebind();
         animator4.Update(0f);
-        Debug.Log("Animation terminée et objets désactivés.");
+        boutonAnimator4.Rebind();
+        boutonAnimator4.Update(0f);
+        
     }
 }
