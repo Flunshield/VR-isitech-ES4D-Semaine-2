@@ -7,6 +7,7 @@ public class resetHammer : MonoBehaviour
     public GameObject hammer;  // Le marteau à réinitialiser
     public GameObject correctObject;  // L'objet qui déclenchera la réinitialisation
     private Vector3 initialPosition;  // Position initiale du marteau
+    private Rigidbody hammerRigidbody;  // Référence au Rigidbody du marteau
 
     // Start is called avant la première frame update
     void Start()
@@ -20,6 +21,12 @@ public class resetHammer : MonoBehaviour
         {
             // Stocke la position initiale du marteau
             initialPosition = hammer.transform.position;
+            // Récupère le Rigidbody du marteau
+            hammerRigidbody = hammer.GetComponent<Rigidbody>();
+            if (hammerRigidbody == null)
+            {
+                Debug.LogError("Hammer does not have a Rigidbody component.");
+            }
         }
 
         // Vérifie si l'objet déclencheur est assigné, sinon affiche une erreur
@@ -37,6 +44,12 @@ public class resetHammer : MonoBehaviour
         {
             // Réinitialise la position du marteau à sa position initiale
             hammer.transform.position = initialPosition;
+            // Réinitialise la vitesse du marteau à zéro
+            if (hammerRigidbody != null)
+            {
+                hammerRigidbody.velocity = Vector3.zero;
+                hammerRigidbody.angularVelocity = Vector3.zero;
+            }
         }
     }
 }
