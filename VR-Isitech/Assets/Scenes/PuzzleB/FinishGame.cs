@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class FinishGame : MonoBehaviour
 {
-    void OnCollisionEnter(Collision collision)
+
+    public GameObject Sphere;
+    public GameObject Portail;
+    void OnTriggerEnter(Collider other)
     {
-        if (collision.gameObject.CompareTag("Finish"))
+       Debug.Log("there it is ");
+        if (other.gameObject.CompareTag("Sphere"))
         {
-            Debug.Log("Collision with Finish detected!");
-            GameObject respawnObject = GameObject.FindGameObjectWithTag("Respawn");
-            if (respawnObject != null)
+            if (Portail != null)
             {
-                respawnObject.SetActive(true);
+                Portail.SetActive(true);
                 Debug.Log("Portal object activated.");
             }
         }
