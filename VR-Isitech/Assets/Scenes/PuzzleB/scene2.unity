@@ -6718,8 +6718,29 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4617036660772024948, guid: 52c7d057cba585641bb68312c10d7791, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1737082808}
   m_SourcePrefab: {fileID: 100100000, guid: 52c7d057cba585641bb68312c10d7791, type: 3}
+--- !u!1 &1737082807 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4617036660772024948, guid: 52c7d057cba585641bb68312c10d7791, type: 3}
+  m_PrefabInstance: {fileID: 1737082806}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1737082808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737082807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 635ad85bfc27e4341bd08f94daffeb8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: sceneD
 --- !u!1 &1751869861
 GameObject:
   m_ObjectHideFlags: 0
@@ -6940,8 +6961,8 @@ GameObject:
   - component: {fileID: 1807152674}
   - component: {fileID: 1807152678}
   - component: {fileID: 1807152679}
-  - component: {fileID: 1807152680}
   - component: {fileID: 1807152681}
+  - component: {fileID: 1807152680}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -7223,11 +7244,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807152673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd136d4d20035481099cd2f1f770c62a, type: 3}
+  m_Script: {fileID: 11500000, guid: 4bcd0ec1ad4114362a54de9ab96fd92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxSpeed: 1
-  maxAngularSpeed: 1
 --- !u!114 &1807152681
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7237,9 +7256,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1807152673}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bcd0ec1ad4114362a54de9ab96fd92a, type: 3}
+  m_Script: {fileID: 11500000, guid: cd136d4d20035481099cd2f1f770c62a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxSpeed: 1
+  maxAngularSpeed: 1
 --- !u!1 &1815086883
 GameObject:
   m_ObjectHideFlags: 0
