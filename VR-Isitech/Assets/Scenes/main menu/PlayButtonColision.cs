@@ -7,6 +7,7 @@ public class ActivateButtonOnCollision : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(other.gameObject.name);
         if (other.gameObject.CompareTag("Cube"))
         {
             other.gameObject.SetActive(false);

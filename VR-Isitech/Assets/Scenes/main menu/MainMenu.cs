@@ -8,11 +8,7 @@ public class MainMenu : MonoBehaviour
     public string nextSceneName;
     public void PlayGame()
     {
-        
-        if (!string.IsNullOrEmpty(nextSceneName))
-        {
-            SceneManager.LoadScene(nextSceneName);
-        }
+        SceneManager.LoadScene(nextSceneName);
         Debug.Log("Play game...");
     }
     public void QuitGame()
