@@ -1828,6 +1828,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 163617556293284183, guid: 0ce7cbb5cae6c0449bd02794ea78317f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 702038820}
+    - targetCorrespondingSourceObject: {fileID: 163617556293284183, guid: 0ce7cbb5cae6c0449bd02794ea78317f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 702038821}
   m_SourcePrefab: {fileID: 100100000, guid: 0ce7cbb5cae6c0449bd02794ea78317f, type: 3}
 --- !u!1 &702038817 stripped
 GameObject:
@@ -2035,6 +2038,20 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 8821376812344912512, guid: 8c67db829d4459646af2df5502b713de, type: 3}
+--- !u!114 &702038821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702038817}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4808dc7fb3d9641dfb31459a974eda02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapBoundsMin: {x: -10, y: -10, z: -10}
+  mapBoundsMax: {x: 10, y: 10, z: 10}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -2811,6 +2828,20 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9075163, y: 1.5176327, z: 0.14409147}
   m_Center: {x: 0.0000027269123, y: 0.804505, z: -0.00047663224}
+--- !u!114 &906802671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 906802663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4808dc7fb3d9641dfb31459a974eda02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mapBoundsMin: {x: -10, y: -10, z: -10}
+  mapBoundsMax: {x: 10, y: 10, z: 10}
 --- !u!4 &922851018 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: c95c2d954a823394a918541b9d7fab22, type: 3}
@@ -4825,6 +4856,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9164e96d5f7440a4eb5a8dd1a8e0855f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 906802670}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 9164e96d5f7440a4eb5a8dd1a8e0855f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 906802671}
   m_SourcePrefab: {fileID: 100100000, guid: 9164e96d5f7440a4eb5a8dd1a8e0855f, type: 3}
 --- !u!1 &1552001893 stripped
 GameObject:
