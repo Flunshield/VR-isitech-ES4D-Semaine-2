@@ -33,7 +33,7 @@ public class Receptacle : MonoBehaviour
         currentAnimator.SetTrigger("openChest");
         correctObject.SetActive(false);
         particule.SetActive(true);
-        StartCoroutine(DeactivateAfterDelay(2f));
+        StartCoroutine(DeactivateAfterDelay(1f));
     }
 
     System.Collections.IEnumerator DeactivateAfterDelay(float delay)
