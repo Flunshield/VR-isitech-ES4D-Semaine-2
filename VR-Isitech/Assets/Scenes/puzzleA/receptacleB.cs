@@ -8,6 +8,7 @@ public class ReceptacleB : MonoBehaviour
     public GameObject portal;
     private Material originalMaterial;
     private bool objectPlaced = false;
+    public GameObject particule;
 
     void Start()
     {
@@ -34,5 +35,6 @@ public class ReceptacleB : MonoBehaviour
         {
             portal.SetActive(true);
         }
+        particule.SetActive(true);
     }
 }
