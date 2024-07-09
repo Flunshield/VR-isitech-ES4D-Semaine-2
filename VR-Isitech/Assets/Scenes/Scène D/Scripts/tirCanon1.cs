@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class tirCanon1 : MonoBehaviour
 {
-    public Animator currentAnimator;  // Référence à l'Animator
+    public Animator bouletAnimator;  // Référence à l'Animator
+    public Animator boutonAnimator;  // Référence à l'Animator
+    public string input;
     public GameObject correctObject;  // L'objet qui déclenchera l'animation
     public GameObject objectToDisplay;  // L'objet à afficher
 
@@ -14,13 +16,18 @@ public class tirCanon1 : MonoBehaviour
     void Start()
     {
         // Vérifie si l'Animator est déjà assigné, sinon essaie de le récupérer
-        if (currentAnimator == null)
+        if (bouletAnimator == null)
         {
-            currentAnimator = gameObject.GetComponent<Animator>();
-            if (currentAnimator == null)
+            bouletAnimator = gameObject.GetComponent<Animator>();
+            if (bouletAnimator == null)
             {
                 Debug.LogError("Animator not found on " + gameObject.name);
             }
+        }
+
+        if(boutonAnimator == null)
+        {
+            Debug.LogError("Bouton Animator is not assigned in the inspector.");
         }
 
         // Vérifie si les objets sont assignés
@@ -47,7 +54,8 @@ public class tirCanon1 : MonoBehaviour
         // Vérifie si l'objet entrant est celui attendu
         if (other.gameObject == correctObject)
         {
-            currentAnimator.SetBool(trigger, true);  // Déclenche l'animation
+            boutonAnimator.SetBool(input, true);  // Déclenche l'animation du bouton
+            bouletAnimator.SetBool(trigger, true);  // Déclenche l'animation
             StartCoroutine(DisplayObjectAfterDelay(2.0f));  // Démarre la coroutine pour afficher l'objet après 2 secondes
         }
     }
