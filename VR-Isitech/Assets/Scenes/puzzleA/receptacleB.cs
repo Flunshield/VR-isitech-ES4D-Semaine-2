@@ -31,10 +31,17 @@ public class ReceptacleB : MonoBehaviour
             other.gameObject.transform.rotation = transform.rotation;
             GetComponent<Renderer>().material = triggeredMaterial;
         }
+        particule.SetActive(true);
+        StartCoroutine(DeactivateAfterDelay(5f));
+    }
+
+    System.Collections.IEnumerator DeactivateAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        particule.SetActive(false);
         if (portal != null)
         {
             portal.SetActive(true);
         }
-        particule.SetActive(true);
     }
 }

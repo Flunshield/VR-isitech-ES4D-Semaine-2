@@ -25,13 +25,21 @@ public class Receptacle : MonoBehaviour
             {
                 rb.isKinematic = true; // Set isKinematic to true
             }
-
             other.gameObject.GetComponent<XRGrabInteractable>().enabled = false;
             other.gameObject.transform.position = transform.position;
             other.gameObject.transform.rotation = transform.rotation;
             GetComponent<Renderer>().material = triggeredMaterial;
         }
         currentAnimator.SetTrigger("openChest");
+        correctObject.SetActive(false);
         particule.SetActive(true);
+        StartCoroutine(DeactivateAfterDelay(2f));
+    }
+
+    System.Collections.IEnumerator DeactivateAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        particule.SetActive(false);
     }
 }
+
