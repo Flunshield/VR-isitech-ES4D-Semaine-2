@@ -21,7 +21,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Scene C/SceneC.unity
     guid: a05b4036f0ed8471a8b47e26e33fe9f5
   - enabled: 1
-    path: "Assets/Scenes/Sc\xE8ne A/SceneA.unity"
+    path: "Assets/Scenes/Sce\u0300ne A/SceneA.unity"
     guid: 6b91562262fb72540a9a2e67f8ecb7b0
   - enabled: 1
     path: Assets/Scenes/GameOver/gameOver.unity
