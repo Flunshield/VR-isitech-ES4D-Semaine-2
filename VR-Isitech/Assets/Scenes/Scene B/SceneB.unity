@@ -853,7 +853,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 320486567}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326c1ef981492e54a8f751350ead83fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 81021e61d42cc8f45b883a50834872b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
@@ -862,7 +862,7 @@ MonoBehaviour:
       m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: d37ff5c9-29c2-4d33-83bb-643762d91e67
+      m_Id: 14a4bcf3-d3f2-4b5b-9983-ed715a437bae
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -874,7 +874,7 @@ MonoBehaviour:
       m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 17b2133d-9430-4830-add2-eeb7bd0ba09a
+      m_Id: 887e1559-d0a0-49d8-bdbe-37a5ea121bd2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -887,7 +887,7 @@ MonoBehaviour:
       m_Name: Toggle Inventory
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 1d8d327e-e0e4-4769-85ab-fd34d740b49f
+      m_Id: fc8cefe6-b948-4864-b5bf-bb2578bf8248
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1695,7 +1695,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 660060633}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326c1ef981492e54a8f751350ead83fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 81021e61d42cc8f45b883a50834872b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
@@ -1704,7 +1704,7 @@ MonoBehaviour:
       m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: f58c2821-d3a9-4be8-aa82-d1505022cb73
+      m_Id: 5ccdfd9f-330d-44c2-a75c-8cec4fc927a5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1716,7 +1716,7 @@ MonoBehaviour:
       m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 6db5f2c5-f32a-4049-bc6d-c97c658b2d12
+      m_Id: 49c2f108-ef67-4755-82c0-c25f2e3bc12c
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -1729,7 +1729,7 @@ MonoBehaviour:
       m_Name: Toggle Inventory
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 0f16d659-9bf9-4de1-8c75-2be9ca1d5712
+      m_Id: 4573ea23-6cbf-4fec-8358-c0422f391fc2
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -7015,7 +7015,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 8677371567480465662, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+    - {fileID: 6454594071094758631, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9014170785475729501, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: 0

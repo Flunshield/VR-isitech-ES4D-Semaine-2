@@ -9,6 +9,8 @@ public class GlobalReceptacle : MonoBehaviour
     public LeftDoorController leftSecondDoorController;  
     public RightDoorController rightSecondDoorController;
 
+    public GameObject Portail;
+
     void Start()
     {
         foreach (var receptacle in receptacles)
@@ -35,6 +37,7 @@ public class GlobalReceptacle : MonoBehaviour
             rightFirstDoorController.OpenDoors();
             leftSecondDoorController.OpenDoors();
             rightSecondDoorController.OpenDoors();
+            Portail.SetActive(true);
         }
         else
         {
@@ -42,6 +45,7 @@ public class GlobalReceptacle : MonoBehaviour
             rightFirstDoorController.CloseDoors();
             leftSecondDoorController.CloseDoors();
             rightSecondDoorController.CloseDoors();
+            Portail.SetActive(false);
         }
     }
 }
