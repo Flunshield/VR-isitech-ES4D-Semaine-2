@@ -5095,7 +5095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9682eab4ddd84c229518add07d0ec9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextSceneName: puzzle 3
+  nextSceneName: SceneA
 --- !u!1001 &1384614555
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class GlobalReceptacle : MonoBehaviour
 {
-    public List<Receptacle> receptacles;
+    public List<SlotReceptacle> receptacles;
     public LeftDoorController leftFirstDoorController;  
     public RightDoorController rightFirstDoorController;  
     public LeftDoorController leftSecondDoorController;  
