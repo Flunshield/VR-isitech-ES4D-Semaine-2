@@ -8,6 +8,8 @@ TagManager:
   - collectible
   - Weapon
   - Destructible
+  - Sphere
+  - Hammer
   layers:
   - Default
   - TransparentFX
