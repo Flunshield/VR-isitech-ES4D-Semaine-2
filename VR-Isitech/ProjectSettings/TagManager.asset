@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Anchor
   - collectible
+  - Weapon
+  - Destructible
   - Sphere
   - Hammer
   layers:

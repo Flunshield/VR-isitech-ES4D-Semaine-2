@@ -1,19 +1,23 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-
-namespace Unity.VRTemplate
+using UnityEngine.XR.Interaction.Toolkit;
+public class DestroyOnContact : MonoBehaviour
 {
-    /// <summary>
-    /// Destroys GameObject after a few seconds.
-    /// </summary>
-    public class DestroyObject : MonoBehaviour
-    {
-        [SerializeField]
-        [Tooltip("Time before destroying in seconds.")]
-        float m_Lifetime = 5f;
+    // Tag de l'arme (marteau) qui peut détruire cet objet
+    public string weaponTag = "Weapon";
+    public GameObject dropItem;
 
-        void Start()
+    // Méthode appelée lorsqu'un autre collider entre en contact avec celui de cet objet
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("an collison was make ");
+        // Vérifie si l'objet en contact a le tag de l'arme
+        if (collision.gameObject.CompareTag(weaponTag))
         {
-            Destroy(gameObject, m_Lifetime);
+            // Détruit cet objet
+            Destroy(gameObject);
+            dropItem.SetActive(true);
         }
     }
 }

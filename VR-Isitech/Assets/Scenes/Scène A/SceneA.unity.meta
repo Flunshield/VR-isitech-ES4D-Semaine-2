@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:VR-Isitech/Assets/Scenes/main menu/mainMenu.unity.meta
+guid: 72d7273ffb94c4323bf92c99e3df413f
+========
 guid: 8a52970fd836ac646886f1a8576b572d
+>>>>>>>> main:VR-Isitech/Assets/Scenes/Scène A/SceneA.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 
