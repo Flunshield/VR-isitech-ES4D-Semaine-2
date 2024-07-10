@@ -41,10 +41,6 @@ public class GlobalReceptacle : MonoBehaviour
         }
         else
         {
-            leftFirstDoorController.CloseDoors();
-            rightFirstDoorController.CloseDoors();
-            leftSecondDoorController.CloseDoors();
-            rightSecondDoorController.CloseDoors();
             Portail.SetActive(false);
         }
     }

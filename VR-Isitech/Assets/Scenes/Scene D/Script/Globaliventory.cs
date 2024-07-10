@@ -32,8 +32,6 @@ public class GlobalInventory : MonoBehaviour
         else
         {
             Debug.Log("the door is Close");
-            leftDoorController.CloseDoors();
-            rightDoorController.CloseDoors();
         }
     }
 
