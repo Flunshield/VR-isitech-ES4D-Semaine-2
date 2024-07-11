@@ -11,11 +11,12 @@ public class addItem : MonoBehaviour
     private Renderer slotRenderer;
     private Dictionary<GameObject, bool> inventoryItems = new Dictionary<GameObject, bool>();
     private GlobalInventory globalInventory;  // Référence à l'inventaire global
-
+    private XRGrabInteractable grabInteractable;
     private void Start()
     {
         slotRenderer = GetComponent<Renderer>();
         slotRenderer.material.color = originalColor;
+        grabInteractable = GetComponent<XRGrabInteractable>();
     }
 
     private void Update()
@@ -33,7 +34,6 @@ public class addItem : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OnTriggerEnter()");
-
         GameObject gameObject = other.gameObject;
         if (gameObject.CompareTag("collectible") && gameObject.GetComponent<XRGrabInteractable>())
         {
@@ -69,6 +69,8 @@ public class addItem : MonoBehaviour
 
         // Réduit la taille de l'item
         item.transform.localScale = new Vector3(0.5f, 0.5f, 0.5f);
+    
+
 
         var rigidbody = item.GetComponent<Rigidbody>();
         if (rigidbody != null)
@@ -87,6 +89,7 @@ public class addItem : MonoBehaviour
         if (!inventoryItems.ContainsKey(item))
         {
             inventoryItems.Add(item, true);
+            item.SetActive(true);
         }
         else
         {
@@ -100,6 +103,7 @@ public class addItem : MonoBehaviour
         }
 
         slotRenderer.material.color = originalColor;
+          item.SetActive(true);
     }
 
     void OnItemGrabbed(SelectExitEventArgs args)
@@ -121,7 +125,8 @@ public class addItem : MonoBehaviour
         var grabInteractable = item.GetComponent<XRGrabInteractable>();
         if (grabInteractable != null)
         {
-            grabInteractable.selectExited.RemoveListener(OnItemGrabbed); // Nettoyer l'événement pour éviter les appels multiples
+            grabInteractable.selectExited.RemoveListener(OnItemGrabbed);
+             // Nettoyer l'événement pour éviter les appels multiples
         }
 
         // Réinitialiser l'échelle de l'item pour sa taille originale

@@ -1049,9 +1049,10 @@ PrefabInstance:
     - target: {fileID: 2076938874557657749, guid: 5ffc2767e722d8b47b8c8b3c55c0d4dd, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d936608e1969947b5f410959bad6ab, type: 2}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -3930934697570354563, guid: 5ffc2767e722d8b47b8c8b3c55c0d4dd, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5ffc2767e722d8b47b8c8b3c55c0d4dd, type: 3}
@@ -1110,7 +1111,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 6670a1e69c32cf14c805b03a61a90bb0, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d936608e1969947b5f410959bad6ab, type: 2}
     - target: {fileID: 919132149155446097, guid: 6670a1e69c32cf14c805b03a61a90bb0, type: 3}
       propertyPath: m_Name
       value: 99_Enviroment_Floor_05
@@ -1326,7 +1327,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: f5a2aed0ed573f4479111a67565c1d46, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d936608e1969947b5f410959bad6ab, type: 2}
     - target: {fileID: 919132149155446097, guid: f5a2aed0ed573f4479111a67565c1d46, type: 3}
       propertyPath: m_Name
       value: 99_Enviroment_Floor_03
@@ -1443,7 +1444,9 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6454594071094758631, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
+    - {fileID: 8677371567480465662, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
     m_AddedGameObjects:
     - targetCorrespondingSourceObject: {fileID: 9014170785475729501, guid: 895f6f3c2d334633b5800312285058d2, type: 3}
       insertIndex: 0
@@ -1991,7 +1994,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: f01f226db818888409adf35c625578a4, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d936608e1969947b5f410959bad6ab, type: 2}
     - target: {fileID: 919132149155446097, guid: f01f226db818888409adf35c625578a4, type: 3}
       propertyPath: m_Name
       value: 99_Enviroment_Floor_02
@@ -2215,9 +2218,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 1002418165}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326c1ef981492e54a8f751350ead83fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 81021e61d42cc8f45b883a50834872b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pinchAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Pinch Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: e39cae4e-572d-4146-93b6-5bb99beb9f2e
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -4289430672226363583, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gripAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 136bc0e5-801b-4b39-a671-1ecd946e53d2
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  handAnimator: {fileID: 1002418168}
+  toggleInventoryAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Toggle Inventory
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 1f783b61-377e-4ee4-9cda-cdb6a46d7b24
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  inventory: {fileID: 0}
+--- !u!95 &1002418168 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 109434732388006827, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+  m_PrefabInstance: {fileID: 1002418163}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1037109140
 GameObject:
   m_ObjectHideFlags: 0
@@ -2625,79 +2671,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157023123}
   m_CullTransparentMesh: 1
---- !u!1001 &1356007993
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -2.29215
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.3919353
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.71317285
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.70098823
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -7511558181221131132, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
-    - target: {fileID: 919132149155446097, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
-      propertyPath: m_Name
-      value: 99_Enviroment_Column_Rocky_1
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3b065307e61a1b04abb4d0063d1265c5, type: 3}
 --- !u!1001 &1356488724
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2753,7 +2726,7 @@ PrefabInstance:
     - target: {fileID: -5482117286361355716, guid: a505163f5c342a548897854f574e67ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d936608e1969947b5f410959bad6ab, type: 2}
     - target: {fileID: 919132149155446097, guid: a505163f5c342a548897854f574e67ff, type: 3}
       propertyPath: m_Name
       value: 99_Enviroment_Wall_03
@@ -2819,7 +2792,7 @@ PrefabInstance:
     - target: {fileID: -7511558181221131132, guid: 67db746dbd507f24093eca27ac44957b, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d936608e1969947b5f410959bad6ab, type: 2}
     - target: {fileID: 919132149155446097, guid: 67db746dbd507f24093eca27ac44957b, type: 3}
       propertyPath: m_Name
       value: 99_Enviroment_Floor_01
@@ -2891,7 +2864,7 @@ PrefabInstance:
     - target: {fileID: 8701192284099403807, guid: 33017ed3f61fb2f4aaf8f84ce029b5eb, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 7a723ecfb519e7945a7fa67bed0a57f1, type: 2}
+      objectReference: {fileID: 2100000, guid: 00d936608e1969947b5f410959bad6ab, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects:
     - {fileID: 4849477198836977210, guid: 33017ed3f61fb2f4aaf8f84ce029b5eb, type: 3}
@@ -3465,9 +3438,52 @@ MonoBehaviour:
   m_GameObject: {fileID: 2054179249}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 326c1ef981492e54a8f751350ead83fe, type: 3}
+  m_Script: {fileID: 11500000, guid: 81021e61d42cc8f45b883a50834872b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  pinchAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Pinch Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: ca8a1da8-99c2-4a26-bb71-c7e1bc259257
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 7904272356298805229, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  gripAnimationAction:
+    m_UseReference: 1
+    m_Action:
+      m_Name: Grip Animation
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 97363db8-0b49-4fd5-80c3-5c03f9f1d9aa
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
+  handAnimator: {fileID: 2054179252}
+  toggleInventoryAction:
+    m_UseReference: 0
+    m_Action:
+      m_Name: Toggle Inventory
+      m_Type: 0
+      m_ExpectedControlType: 
+      m_Id: 916c6795-3704-42e4-9c28-288014dd9980
+      m_Processors: 
+      m_Interactions: 
+      m_SingletonActionBindings: []
+      m_Flags: 0
+    m_Reference: {fileID: 0}
+  inventory: {fileID: 0}
+--- !u!95 &2054179252 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  m_PrefabInstance: {fileID: 2054179247}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2121640976
 GameObject:
   m_ObjectHideFlags: 0
@@ -3607,7 +3623,6 @@ CanvasRenderer:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
-  - {fileID: 1356007993}
   - {fileID: 947716344}
   - {fileID: 1489939463}
   - {fileID: 470280746}

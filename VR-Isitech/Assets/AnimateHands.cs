@@ -12,6 +12,7 @@ public class AnimateHandInput : MonoBehaviour
     public GameObject inventory; // Référence à l'objet inventaire
 
     private bool inventoryVisible = false; // État actuel de l'inventaire
+    private bool canToggleInventory = true; // Indicateur pour savoir si on peut basculer l'inventaire
 
     // Start is called before the first frame update
     void Start()
@@ -29,7 +30,7 @@ public class AnimateHandInput : MonoBehaviour
         handAnimator.SetFloat("Grip", gripValue);
 
         // Lire la valeur de l'action de bascule
-        if (toggleInventoryAction.action.WasPressedThisFrame())
+        if (canToggleInventory && toggleInventoryAction.action.WasPressedThisFrame())
         {
             ToggleInventory();
         }
