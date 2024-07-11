@@ -1,15 +1,18 @@
 using UnityEngine;
+using UnityEngine.XR.Interaction.Toolkit;
 
 public class Game : MonoBehaviour
 {
     public GameObject sphere;
     public GameObject particule;
     private Vector3 initialPosition;
+    private XRGrabInteractable grabInteractable;
 
     void Start()
     {
         // Stocker la position initiale de la sphère
         initialPosition = sphere.transform.position;
+        grabInteractable = sphere.GetComponent<XRGrabInteractable>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -19,9 +22,15 @@ public class Game : MonoBehaviour
         {
             // Déplacer la sphère à son point de départ
             ResetSpherePosition();
-            
+
             // Activer les particules
             particule.SetActive(true);
+
+            // Désactiver le grab
+            if (grabInteractable != null)
+            {
+                grabInteractable.enabled = false;
+            }
 
             // Désactiver les particules après un délai
             StartCoroutine(DeactivateAfterDelay(2.0f));
@@ -45,5 +54,11 @@ public class Game : MonoBehaviour
     {
         yield return new WaitForSeconds(delay);
         particule.SetActive(false);
+
+        // Réactiver le grab après un délai
+        if (grabInteractable != null)
+        {
+            grabInteractable.enabled = true;
+        }
     }
 }
