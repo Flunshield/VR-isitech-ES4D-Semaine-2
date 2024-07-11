@@ -3084,7 +3084,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.1824562, y: 0.20230597, z: 0.2551546}
   m_Center: {x: 0.043304555, y: 0.016410135, z: -0.00042984635}
---- !u!114 &845995869
+--- !u!95 &845995870 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
+  m_PrefabInstance: {fileID: 1970440069}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &845995871
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3093,7 +3098,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 845995866}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81021e61d42cc8f45b883a50834872b5, type: 3}
+  m_Script: {fileID: 11500000, guid: dc578615cf6f45c41bfd35d8de594d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
@@ -3102,7 +3107,7 @@ MonoBehaviour:
       m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: cc14e7dc-f866-4c65-a309-597e2838d58f
+      m_Id: 69f217b3-3ad6-443d-8e71-2ee371a053a9
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -3114,31 +3119,13 @@ MonoBehaviour:
       m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 2322c58a-c35f-421d-973b-ffd706ca3659
+      m_Id: 2659c0c3-22bd-4ea6-96a3-bbb03b2604d5
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: -1758520528963094988, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   handAnimator: {fileID: 845995870}
-  toggleInventoryAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Toggle Inventory
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 32b3b8fa-23b6-4647-af6c-90481ca4f1f1
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  inventory: {fileID: 0}
---- !u!95 &845995870 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 5686134208192617028, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
-  m_PrefabInstance: {fileID: 1970440069}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &860993470
 GameObject:
   m_ObjectHideFlags: 0
@@ -4183,7 +4170,12 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.26684955, y: 0.22251827, z: 0.26980978}
   m_Center: {x: -0.04192148, y: 0.016852245, z: -0.010187916}
---- !u!114 &1158115851
+--- !u!95 &1158115852 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 109434732388006827, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
+  m_PrefabInstance: {fileID: 1580127538}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1158115853
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4192,7 +4184,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1158115848}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81021e61d42cc8f45b883a50834872b5, type: 3}
+  m_Script: {fileID: 11500000, guid: dc578615cf6f45c41bfd35d8de594d0c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   pinchAnimationAction:
@@ -4201,7 +4193,7 @@ MonoBehaviour:
       m_Name: Pinch Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: 9477680c-a5f3-4117-b6c9-788420ca3c79
+      m_Id: a6434ac5-d329-4d60-a10a-84f879948606
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
@@ -4213,31 +4205,13 @@ MonoBehaviour:
       m_Name: Grip Animation
       m_Type: 0
       m_ExpectedControlType: 
-      m_Id: f57a58f0-60f3-4063-a90e-b4eef6aec524
+      m_Id: fc64ae26-ad7c-4e72-9802-0013e818cb69
       m_Processors: 
       m_Interactions: 
       m_SingletonActionBindings: []
       m_Flags: 0
     m_Reference: {fileID: 6558622148059887818, guid: c348712bda248c246b8c49b3db54643f, type: 3}
   handAnimator: {fileID: 1158115852}
-  toggleInventoryAction:
-    m_UseReference: 0
-    m_Action:
-      m_Name: Toggle Inventory
-      m_Type: 0
-      m_ExpectedControlType: 
-      m_Id: 33f914bc-0782-4b86-916a-1f34eef648d8
-      m_Processors: 
-      m_Interactions: 
-      m_SingletonActionBindings: []
-      m_Flags: 0
-    m_Reference: {fileID: 0}
-  inventory: {fileID: 0}
---- !u!95 &1158115852 stripped
-Animator:
-  m_CorrespondingSourceObject: {fileID: 109434732388006827, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
-  m_PrefabInstance: {fileID: 1580127538}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1169831098 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 99c532f0f6a3efd46a5c46e41a790c3c, type: 3}
@@ -6300,10 +6274,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1158115851}
+      addedObject: {fileID: 1158115850}
     - targetCorrespondingSourceObject: {fileID: 109434732395284509, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1158115850}
+      addedObject: {fileID: 1158115853}
   m_SourcePrefab: {fileID: 100100000, guid: 65847589f926b734d9eaed6e25f0046b, type: 3}
 --- !u!1001 &1585975030
 PrefabInstance:
@@ -8362,10 +8336,10 @@ PrefabInstance:
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 845995869}
+      addedObject: {fileID: 845995868}
     - targetCorrespondingSourceObject: {fileID: 5686134208185362930, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 845995868}
+      addedObject: {fileID: 845995871}
   m_SourcePrefab: {fileID: 100100000, guid: 1fd3a7c43c8190f4d8c167ebde694364, type: 3}
 --- !u!1 &1972141634
 GameObject:
