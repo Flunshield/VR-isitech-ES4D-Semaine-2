@@ -11,6 +11,9 @@ public class GlobalReceptacle : MonoBehaviour
 
     public GameObject Portail;
 
+    public AudioSource audioSoundEffectOpen;
+    public AudioSource audioSoundEffectClose;
+
     void Start()
     {
         foreach (var receptacle in receptacles)
@@ -37,10 +40,12 @@ public class GlobalReceptacle : MonoBehaviour
             rightFirstDoorController.OpenDoors();
             leftSecondDoorController.OpenDoors();
             rightSecondDoorController.OpenDoors();
+            audioSoundEffectOpen.Play();
             Portail.SetActive(true);
         }
         else
         {
+            audioSoundEffectClose.Play();
             Portail.SetActive(false);
         }
     }

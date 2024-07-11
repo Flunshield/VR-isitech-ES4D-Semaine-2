@@ -14,7 +14,7 @@ public class LeftDoorController : MonoBehaviour
     private bool isOpen = false;          // État actuel des portes (ouvertes/fermées)
     private Quaternion leftClosedRotation;  // Rotation initiale de la porte gauche
     private Quaternion leftOpenRotation;    // Rotation finale de la porte gauche
-
+    
     void Start()
     {
         leftClosedRotation = leftDoorTransform.rotation;
@@ -26,11 +26,13 @@ public class LeftDoorController : MonoBehaviour
         if (isOpen)
         {
             leftDoorTransform.rotation = Quaternion.Slerp(leftDoorTransform.rotation, leftOpenRotation, Time.deltaTime * openSpeed);
+           
             doorCollider.enabled = false; // Désactiver le collider lorsque la porte est ouverte
             doorFrames.enabled = false;
         }
         else
         {
+            
             leftDoorTransform.rotation = Quaternion.Slerp(leftDoorTransform.rotation, leftClosedRotation, Time.deltaTime * openSpeed);
             doorCollider.enabled = true;
             doorFrames.enabled = false; // Activer le collider lorsque la porte est fermée
@@ -41,11 +43,13 @@ public class LeftDoorController : MonoBehaviour
     public void OpenDoors()
     {
         isOpen = true;
+        
     }
 
     // Méthode pour fermer les portes
     public void CloseDoors()
     {
         isOpen = false;
+        
     }
 }

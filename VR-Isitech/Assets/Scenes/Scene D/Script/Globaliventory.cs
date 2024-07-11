@@ -7,7 +7,8 @@ public class GlobalInventory : MonoBehaviour
     public List<addItem> slots;  // Liste des slots
     public LeftDoorController leftDoorController;  // Référence au contrôleur de la porte gauche
     public RightDoorController rightDoorController;  // Référence au contrôleur de la porte droite
-
+    public AudioSource audioSoundEffectOpen;
+    public AudioSource audioSoundEffectClose;
     void Start()
     {
         // Initialiser les slots
@@ -28,10 +29,12 @@ public class GlobalInventory : MonoBehaviour
             Debug.Log("the door is Open");
             leftDoorController.OpenDoors();
             rightDoorController.OpenDoors();
+            audioSoundEffectOpen.Play();
         }
         else
         {
             Debug.Log("the door is Close");
+           
         }
     }
 
